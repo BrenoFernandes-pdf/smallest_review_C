@@ -1,6 +1,6 @@
 // This is just a timer config example to PWM Generation using CubeIDE
 
-/*
+
 #include "stm32f767_hal.h"
 
 TIM_HandleTypeDef hitm1;
@@ -17,4 +17,3 @@ void configure_pwm(void) {
     HAL_TIM_PWM_ConfigChannel(&htim1, &sConfigOC, TIM_CHANNEL_1)
     HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_1);  // Start PWM generation
 }
-*/

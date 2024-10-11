@@ -24,6 +24,12 @@ void configure_adc(void)
     HAL_ADC_ConfigChannel(&hadc1, &sConfig);
 }
 
+uint32_t read_adc(void){
+    HAL_ADC_Start(&hadc1);
+    HAL_ADC_PollForConversion(&hadc1, HAL_MAX_DELAY);
+    return HAL_ADC_GetValue(&hadc1);
+}
+
 int main(void)
 {
 
